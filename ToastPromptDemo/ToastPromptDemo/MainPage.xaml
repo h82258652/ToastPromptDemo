@@ -1,0 +1,31 @@
+﻿<Page x:Class="ToastPromptDemo.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:ToastPromptDemo"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <FlipView HorizontalAlignment="Center"
+                  Width="400"
+                  SelectedIndex="1">
+            <Grid Background="#200000FF" />
+            <Grid Background="#2000FF00">
+                <Grid>
+                    <Button Content="Test"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Click="ButtonBase_OnClick"></Button>
+                </Grid>
+                <Grid>
+                    <local:ToastPrompt HorizontalAlignment="Right"
+                                       VerticalAlignment="Top"
+                                       SlideInDirection="Right"
+                                       CornerRadius="20,0,0,20"
+                                       x:Name="ToastPromptInstance">Hello World</local:ToastPrompt>
+                </Grid>
+            </Grid>
+            <Grid Background="#20FF0000"></Grid>
+        </FlipView>
+    </Grid>
+</Page>
